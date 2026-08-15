@@ -1,4 +1,4 @@
-<mxfile host="Electron" pages="3">
+<mxfile host="Electron" pages="4">
   <diagram name="ER" id="U2QQxKKPFAgmRrTMykpl">
     <mxGraphModel dx="664" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -93,7 +93,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="DE8e4iD7i7nT-xPYOBzU" name="Flowchart">
+  <diagram id="DE8e4iD7i7nT-xPYOBzU" name="AddingAnimalFlowchart">
     <mxGraphModel dx="664" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -173,12 +173,51 @@
           <mxGeometry height="60" width="100" x="240" y="1090" as="geometry" />
         </mxCell>
         <mxCell id="_vvyYFRk1-4r5OojljMs-23" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vvyYFRk1-4r5OojljMs-22">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="1070" />
+              <mxPoint x="290" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-26" connectable="0" parent="_vvyYFRk1-4r5OojljMs-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Str" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="_vvyYFRk1-4r5OojljMs-24" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="END" vertex="1">
           <mxGeometry height="60" width="100" x="380" y="1090" as="geometry" />
         </mxCell>
         <mxCell id="_vvyYFRk1-4r5OojljMs-25" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.93;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vvyYFRk1-4r5OojljMs-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="BwcjuPnD--wtNXHoMHu3" name="AllAnimalsViewFlowchart">
+    <mxGraphModel dx="664" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x3V53EFvMXoNgOU175B2-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Viewing All Animals" vertex="1">
+          <mxGeometry height="100" width="100" x="350" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-5" edge="1" parent="1" source="x3V53EFvMXoNgOU175B2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="x3V53EFvMXoNgOU175B2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Start" vertex="1">
+          <mxGeometry height="60" width="100" x="350" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-3" edge="1" parent="1" source="x3V53EFvMXoNgOU175B2-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="x3V53EFvMXoNgOU175B2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Iterate through the list and print each object of the list line by line" vertex="1">
+          <mxGeometry height="140" width="120" x="340" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-6" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="END" vertex="1">
+          <mxGeometry height="60" width="100" x="350" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="x3V53EFvMXoNgOU175B2-7" edge="1" parent="1" source="x3V53EFvMXoNgOU175B2-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="x3V53EFvMXoNgOU175B2-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

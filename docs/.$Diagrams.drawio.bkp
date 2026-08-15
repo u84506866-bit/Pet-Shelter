@@ -113,6 +113,11 @@
         <mxCell id="_vvyYFRk1-4r5OojljMs-8" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="_vvyYFRk1-4r5OojljMs-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-17" connectable="0" parent="_vvyYFRk1-4r5OojljMs-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Str" vertex="1">
+          <mxGeometry relative="1" x="-0.24" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="_vvyYFRk1-4r5OojljMs-5" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal Name:" vertex="1">
           <mxGeometry height="60" width="150" x="215" y="330" as="geometry" />
         </mxCell>
@@ -124,6 +129,57 @@
         </mxCell>
         <mxCell id="_vvyYFRk1-4r5OojljMs-9" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal Age:&amp;nbsp;" vertex="1">
           <mxGeometry height="60" width="150" x="215" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-14" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_vvyYFRk1-4r5OojljMs-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-11" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.stored_data;whiteSpace=wrap;" value="Animal.age" vertex="1">
+          <mxGeometry height="60" width="100" x="240" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-12" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vvyYFRk1-4r5OojljMs-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-18" connectable="0" parent="_vvyYFRk1-4r5OojljMs-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Int" vertex="1">
+          <mxGeometry relative="1" x="-0.08" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-16" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="_vvyYFRk1-4r5OojljMs-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="840" />
+              <mxPoint x="290" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-19" connectable="0" parent="_vvyYFRk1-4r5OojljMs-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Str" vertex="1">
+          <mxGeometry relative="1" x="-0.04" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-13" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal gender:&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="170" x="205" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-21" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_vvyYFRk1-4r5OojljMs-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-15" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.stored_data;whiteSpace=wrap;" value="Animal.gender" vertex="1">
+          <mxGeometry height="60" width="100" x="240" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-20" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal Breed:&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="170" x="205" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-22" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.stored_data;whiteSpace=wrap;" value="Animal.Breed" vertex="1">
+          <mxGeometry height="60" width="100" x="240" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-23" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vvyYFRk1-4r5OojljMs-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-24" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="END" vertex="1">
+          <mxGeometry height="60" width="100" x="380" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="_vvyYFRk1-4r5OojljMs-25" edge="1" parent="1" source="_vvyYFRk1-4r5OojljMs-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.93;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vvyYFRk1-4r5OojljMs-24">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

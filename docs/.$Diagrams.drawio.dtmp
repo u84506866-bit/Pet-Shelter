@@ -1,4 +1,4 @@
-<mxfile host="Electron" pages="4">
+<mxfile host="Electron" pages="5">
   <diagram name="ER" id="U2QQxKKPFAgmRrTMykpl">
     <mxGraphModel dx="664" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -219,6 +219,35 @@
         </mxCell>
         <mxCell id="x3V53EFvMXoNgOU175B2-7" edge="1" parent="1" source="x3V53EFvMXoNgOU175B2-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="x3V53EFvMXoNgOU175B2-6">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="8mOTAwNUPlp57VNfmApY" name="Page-5">
+    <mxGraphModel dx="664" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-3" edge="1" parent="1" source="y-Rf1O45OjGxFI6xUVCz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="y-Rf1O45OjGxFI6xUVCz-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Search Animals by their Name" vertex="1">
+          <mxGeometry height="100" width="100" x="220" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-5" edge="1" parent="1" source="y-Rf1O45OjGxFI6xUVCz-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="y-Rf1O45OjGxFI6xUVCz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="START" vertex="1">
+          <mxGeometry height="60" width="100" x="220" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-8" edge="1" parent="1" source="y-Rf1O45OjGxFI6xUVCz-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="y-Rf1O45OjGxFI6xUVCz-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-4" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal&#39;s Name:&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="170" x="185" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="y-Rf1O45OjGxFI6xUVCz-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="search the name inside the list&#39;s objects through a loop" vertex="1">
+          <mxGeometry height="100" width="100" x="220" y="470" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
