@@ -7,8 +7,9 @@ class Animal:
         self.gender = gender
         self.breed = breed
 
-    def show_info():
+    def show_info(self):
         pass
 
-    def make_sound():
+    def make_sound(self):
         pass
+

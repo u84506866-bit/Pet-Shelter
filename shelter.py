@@ -1,17 +1,34 @@
+from animals import Animal
+
+
 class Shelter:
 
-    def __init__(self, animal_list):
+    def __init__(self):
 
-        self.animal_list = animal_list
+        self.__animal_list = list()
 
-    def add_animal(self):
-        pass
+    def add_animal(self, Animal):
 
-    def remove_animal(self):
-        pass
+        self.__animal_list.append(Animal)
 
-    def search_animal(self):
-        pass
+    def remove_animal(self,name):
 
-    def show_animal(self):
-        pass
+        for animal in self.__animal_list:
+
+            if animal.name == name:
+                self.__animal_list.remove(animal)
+
+    
+    def search_animal(self, name):
+
+        new_lst = list()
+
+        for animal in self.__animal_list:
+            if animal.name = name:
+                new_lst.append(animal)
+
+
+    def show_animals(self):
+
+        for index in self.__animal_list:
+            print (f"{index.name}: {index.gender} {index.age} {index.breed}")
