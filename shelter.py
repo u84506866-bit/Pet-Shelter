@@ -24,7 +24,7 @@ class Shelter:
         new_lst = list()
 
         for animal in self.__animal_list:
-            if animal.name = name:
+            if animal.name == name:
                 new_lst.append(animal)
 
 
