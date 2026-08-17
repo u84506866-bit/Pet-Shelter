@@ -14,8 +14,8 @@ class Animal:
 
 class Dog(Animal):
 
-    def __init__(self, name, age, gender, breed):
-        super().__init__(self, name, age, gender, breed)
+    def __init__(self, name, age, gender, breed, adopted):
+        super().__init__(self, name, age, gender, breed, adopted=False)
 
     def  make_sound(self):
         print("Woof woof")
