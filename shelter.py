@@ -1,11 +1,12 @@
 from animals import Animal
-
+from exceptions import Exception
 
 class Shelter:
 
     def __init__(self):
 
         self.__animal_list = list()
+        self.__adopted_animals = list()
 
     def add_animal(self, Animal):
 
@@ -32,3 +33,24 @@ class Shelter:
 
         for index in self.__animal_list:
             print (f"{index.name}: {index.gender} {index.age} {index.breed}")
+
+
+    def adopt_animal(self, Animal, Adopter):
+         # here i will take the person name and then turn the animal.adopted true and then append it to the adopted animals list
+         if Animal.adopted == False:
+            if Adopter.adopted_animals:
+                self.__adopted_animals.append([Animal,Adopter])
+
+            else:
+                Exception.MaximumAdoptionReachedError()
+
+         else:
+            Exception.AnimalAlreadyAdoptedError()
+
+        
+    def returning_animal(self):
+        pass
+
+
+    def  show_animals_adopted(self):
+        pass

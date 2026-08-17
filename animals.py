@@ -1,11 +1,12 @@
 class Animal:
 
-    def __init__(self, name, age, gender, breed):
+    def __init__(self, name, age, gender, breed, adopted):
 
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.breed = breed
+        self.name = str(name)
+        self.age = int(age)
+        self.gender = str(gender)
+        self.breed = str(breed)
+        self.adopted = bool(adopted)
 
     def show_info(self):
         print(f"{self.name}:{self.age}{self.gender}:{self.breed}")

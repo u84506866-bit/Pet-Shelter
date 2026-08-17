@@ -1,14 +1,26 @@
+# Using the re library we will use regex methods
 import re
 
+# In class Adopter there is every information about the 
+# person that is adopting the pet
+# and here also there is a method that will validate the 
+# person's Phone and national id 
 class Adopter:
-    
+    # each person has a name a phone number and national id
+    # and most importantly how many pets do they have
     def __init__(self, name, phone, national_id, adopted_animals):
-        self.name = name
-        self.phone = phone
-        self.national_id = national_id
-        self.adopted_animals = adopted_animals
+        self.name = str(name)
+        self.phone = str(phone)
+        self.national_id = str(national_id)
+        self.adopted_animals = int(adopted_animals)
 
+    # Here we will use regex to determine wheter or not they 
+    # are giving correct information before they can adopt 
+    # a pet
     def validate_format(self):
+        # This part uses regex and find valid numbers that 
+        # starts with 0 and 98 and +98 at the start and 
+        # after wards it take 9 other digits
         phone_pattern = r'^(?:0|98|\+98)?9\d{9}$'
         phone_valid = bool(re.fullmatch(phone_pattern, str(self.phone).strip()))
 
