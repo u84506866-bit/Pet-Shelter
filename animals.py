@@ -17,7 +17,7 @@ class Dog(Animal):
     def __init__(self, name, age, gender, breed):
         super().__init__(self, name, age, gender, breed)
 
-    def  make_sound():
+    def  make_sound(self):
         print("Woof woof")
 
 class Cat(Animal):
@@ -25,7 +25,7 @@ class Cat(Animal):
     def __init__(self, name, age, gender, breed):
         super().__init__(self, name, age, gender, breed)
 
-    def make_sound():
+    def make_sound(self):
         print("Meow meow")
 
 class Bird(Animal):
@@ -33,7 +33,7 @@ class Bird(Animal):
     def __init__(self, name, age, gender, breed):
         super().__init__(self,name,age,gender,breed)
 
-    def make_sound():
+    def make_sound(self):
         print("Screech screech")
 
 class Rabbit(Animal):
@@ -41,5 +41,5 @@ class Rabbit(Animal):
     def __init__(self, name, age, gender, breed):
         super().__init__(self,name,age,gender,breed)
 
-    def make_sound():
+    def make_sound(self):
         print("Squeak squeak")

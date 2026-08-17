@@ -1,4 +1,4 @@
-from main.py import *
+import main
 
 
 class Exception:

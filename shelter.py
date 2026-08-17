@@ -22,11 +22,10 @@ class Shelter:
     
     def search_animal(self, name):
 
-        new_lst = list()
-
         for animal in self.__animal_list:
             if animal.name == name:
-                new_lst.append(animal)
+                print(f"{animal.name}: {animal.age} {animal.gender} {animal.breed}")
+
 
 
     def show_animals(self):
@@ -40,6 +39,7 @@ class Shelter:
          if Animal.adopted == False:
             if Adopter.adopted_animals:
                 self.__adopted_animals.append([Animal,Adopter])
+                Animal.adopted = True
 
             else:
                 Exception.MaximumAdoptionReachedError()
