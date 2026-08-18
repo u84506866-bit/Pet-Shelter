@@ -1,6 +1,6 @@
-import animals
-import people
-import shelter
+from animals import Dog, Cat, Bird, Rabbit
+from people import Adopter
+from shelter import Shelter
 
 from decorators import introduction
 
@@ -8,9 +8,11 @@ class Main:
 
     def __init__(self):
 
-        self. shelter = shelter
+        self. shelter = Shelter()
         self.__animal_list = list()
         self.__person_list = list()
+
+        self.id = 0
 
         self.main_menu()
 
@@ -31,7 +33,8 @@ class Main:
         except ValueError:
             
             print("❌ Error! You Didn't Enter a Number!")
-            self.main_menu()
+            return self.main_menu()
+            
 
         match choice:
 
@@ -61,7 +64,37 @@ class Main:
 
     @introduction("Adding Animal")
     def add_animal(self):
-        # self.Shelter.add_animal()
+        try :
+            breed = str(input("Enter animal's breed:(Dog, Cat, Bird, Rabbit)"))
+            name = str(input("Enter animal's name: "))
+            age = int(input("Enter animal's age: "))
+            gender = str(input("Enter animal's gender: (Female, Male)"))
+        except:
+            print("an Error has occured! Please try again...")
+            return self.add_animal()
+            
+
+        self.id += 1  
+
+        match breed.lower():
+
+            case "dog":
+                self.animal = Dog(name=name, age= age, gender= gender, breed= "Dog", id= self.id)
+
+            case "cat":
+                self.animal = Cat(name= name, age= age, gender= gender, breed= "Cat", id= self.id)
+
+            case "bird":
+                self.animal = Bird(name= name, age= age, gender= gender, breed= "Bird", id= self.id)
+
+            case "rabbit":
+                self.animal = Rabbit(name= name, age= age, gender= gender, breed= "Rabbit", id= self.id)
+
+            case _:
+                        print("⚠️ Unknown breed.")
+                        return self.add_animal()
+
+        self.add_animal(self.animal)    
         self.main_menu()
 
     @introduction("Showing All Animals")
@@ -96,6 +129,7 @@ class Main:
 
         self.main_menu()
 
+    @introduction("Show Adopted Animals")
     def show_adopted_animals(self):
         pass
 
