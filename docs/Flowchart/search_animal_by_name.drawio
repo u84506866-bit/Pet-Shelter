@@ -1,0 +1,87 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="sRhF_xXbZtZt-6hTHzqv">
+    <mxGraphModel dx="664" dy="2047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P28I9hkwiYzWyg7j2j56-1" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P28I9hkwiYzWyg7j2j56-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Search Animals by their Name" vertex="1">
+          <mxGeometry height="100" width="100" x="370" y="-1140" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-3" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="P28I9hkwiYzWyg7j2j56-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="START" vertex="1">
+          <mxGeometry height="60" width="100" x="370" y="-980" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-5" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P28I9hkwiYzWyg7j2j56-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-6" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Enter Animal&#39;s Name:&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="170" x="335" y="-850" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="search the name inside the list&#39;s objects through a loop" vertex="1">
+          <mxGeometry height="100" width="100" x="370" y="-720" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-8" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="P28I9hkwiYzWyg7j2j56-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-9" connectable="0" parent="P28I9hkwiYzWyg7j2j56-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="NO" vertex="1">
+          <mxGeometry relative="1" x="0.0154" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-10" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="P28I9hkwiYzWyg7j2j56-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-11" connectable="0" parent="P28I9hkwiYzWyg7j2j56-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="YES" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-12" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Is the name equal to Objects name?" vertex="1">
+          <mxGeometry height="160" width="150" x="345" y="-590" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-13" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="P28I9hkwiYzWyg7j2j56-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-14" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="P28I9hkwiYzWyg7j2j56-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-15" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" value="No animal found!" vertex="1">
+          <mxGeometry height="60" width="100" x="180" y="-540" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-16" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" value="main" vertex="1">
+          <mxGeometry height="60" width="100" x="180" y="-700" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-17" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="P28I9hkwiYzWyg7j2j56-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="-320" />
+              <mxPoint x="530" y="-670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-18" connectable="0" parent="P28I9hkwiYzWyg7j2j56-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="index + 1" vertex="1">
+          <mxGeometry relative="1" x="0.1745" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-19" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="P28I9hkwiYzWyg7j2j56-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Return object" vertex="1">
+          <mxGeometry height="100" width="100" x="370" y="-370" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-21" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="END" vertex="1">
+          <mxGeometry height="60" width="100" x="370" y="-210" as="geometry" />
+        </mxCell>
+        <mxCell id="P28I9hkwiYzWyg7j2j56-22" edge="1" parent="1" source="P28I9hkwiYzWyg7j2j56-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="P28I9hkwiYzWyg7j2j56-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
