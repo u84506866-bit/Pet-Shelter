@@ -2,6 +2,7 @@ import animals
 import people
 import shelter
 
+from decorators import introduction
 
 class Main:
 
@@ -10,7 +11,7 @@ class Main:
         self. shelter = shelter
         self.__animal_list = list()
         self.__person_list = list()
-        
+
         self.main_menu()
 
 
@@ -35,50 +36,70 @@ class Main:
         match choice:
 
             case 1:
-                add_animal()
+                self.add_animal()
 
             case 2:
-                show_animals()
+                self.show_animals()
 
             case 3:
-                search_animal()
+                self.search_animal()
 
             case 4:
-                adopt_animal()
+                self.adopt_animal()
 
             case 5:
-                return_animal()
+                self.return_animal()
 
             case 6:
-                show_available_animals()
+                self.show_available_animals()
 
             case 7:
-                show_adopted_animals()
+                self.show_adopted_animals()
 
             case 8:
                 exit()
 
+    @introduction("Adding Animal")
+    def add_animal(self):
+        # self.Shelter.add_animal()
+        self.main_menu()
 
-        def add_animal(self):
-            self.Shelter.append
+    @introduction("Showing All Animals")
+    def show_animals(self,  animals_list):
+        pass
 
-        def show_animals(self,  animals_list):
-            pass
+        self.main_menu()
 
-        def search_animal(self, name):
-            pass
+    @introduction("Searching Animal")
+    def search_animal(self, name):
+        pass
 
-        def adopt_animal(self,name,id):
-            pass
+        self.main_menu()
 
-        def return_animal(self):
-            pass
+    @introduction("Animal Adoption")    
+    def adopt_animal(self,name,id):
 
-        def show_available_animals(self):
-            pass
+        pass
 
-        def show_adopted_animals(self):
-            pass 
+        self.main_menu()
+
+
+    @introduction("Return Animal to Shelter")
+    def return_animal(self):
+        pass
+
+        self.main_menu()
+
+    @introduction("Showing All Available Animals")
+    def show_available_animals(self):
+        pass
+
+        self.main_menu()
+
+    def show_adopted_animals(self):
+        pass
+
+        self.main_menu()
 
 if __name__ == "__main__":
 
