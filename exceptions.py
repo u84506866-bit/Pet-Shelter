@@ -1,21 +1,14 @@
-class Exception:
+class AnimalNotFoundError():
+    pass
 
 
-    @staticmethod
-    def AnimalNotFoundError():
-        pass
+class DuplicateAnimalMethod():
+    pass
 
 
-    @staticmethod
-    def DuplicateAnimalMethod():
-        pass
+class AnimalAlreadyAdoptedError():
+    pass
 
 
-    @staticmethod
-    def AnimalAlreadyAdoptedError():
-        pass
-
-
-    @staticmethod
-    def MaximumAdoptionReachedError():
-        pass
+class MaximumAdoptionReachedError():
+    pass

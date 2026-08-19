@@ -2,26 +2,48 @@ from animals import Dog, Cat, Bird, Rabbit
 from people import Adopter
 from shelter import Shelter
 
-from decorators import introduction
+from decorators import introduction, bold_introduction
 
 class Main:
 
     def __init__(self):
 
-        self. shelter = Shelter()
-        self.__animals_list = list()
+        self.shelter = Shelter()
         self.__person_list = list()
 
         self.id = 0
 
-        self.main_menu()
+        self.authentication()
 
+    @bold_introduction("Authentication")
+    def  authentication():
 
-    def main_menu(self):
+        choice = input("👋 Welcome! Please select your role: \n1. Shelter Manager\n2. Adopter\n3.Exit Program\nEnter choice: ")
 
-        print("=======================================\n  🐾 Welcome to Animal Shelter CLI 🐾\n=======================================\n")
+        match choice:
+
+            case 1:
+                self.manager_menu()
+
+            case 2:
+                self.user_menu()
+
+    def manager_menu(self):
+
+            choice = input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit")
+
+            match choice:
+
+                case 1:
+                    self.add_animal()
+
+                case 2:
+                    self.show_animals()
+
+    @introduction("ANIMAL SHELTER MANAGEMENT SYSTEM")
+    def user_menu(self):
         
-        print("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Search Animal\n4. Adopting Animal\n5. Return Animal\n6. Show Available Animals\n7. Show Adopted Animals\n8. Exit ")
+        print("What you want to do?\n1. Search Animal\n2. Adopting Animal\n3. Return Animal\n4. Show Available Animals\n5. Show Adopted Animals\n6. Exit ")
 
         try:
 
@@ -39,27 +61,21 @@ class Main:
         match choice:
 
             case 1:
-                self.add_animal()
-
-            case 2:
-                self.show_animals()
-
-            case 3:
                 self.search_animal()
 
-            case 4:
+            case 2:
                 self.adopt_animal()
 
-            case 5:
+            case 3:
                 self.return_animal()
 
-            case 6:
+            case 4:
                 self.show_available_animals()
 
-            case 7:
+            case 5:
                 self.show_adopted_animals()
 
-            case 8:
+            case 6:
                 exit()
 
     @introduction("Adding Animal")
@@ -79,6 +95,10 @@ class Main:
 
         self.id += 1  
 
+        if gender.lower() not in ["male","female"]:
+            print("Invalid Gender!!")
+            self.main_menu()
+
 
         match breed.lower():
 
@@ -97,21 +117,25 @@ class Main:
             case _:
                         print("⚠️ Unknown breed.")
                         return self.main_menu()
-
-        self.__animals_list.append(self.animal)    
+                        
+        self.shelter.add_animal(self.animal)
+        # self.__animals_list.append(self.animal)    
         self.main_menu()
 
     @introduction("Showing All Animals")
     def show_animals(self):
-        for animal_ in self.__animals_list:
-            print (f"{animal_.id}. name:{animal_.name} age:{animal_.age} gender:{animal_.gender} breed:{animal_.breed}")
-
+        self.shelter.show_animals()
         self.main_menu()
 
     @introduction("Searching Animal")
-    def search_animal(self, name):
-        pass
-        # not implemented
+    def search_animal(self):
+
+        try:
+            name_ = str(input())
+            self.shelter.search_animal(name_)
+        except:
+            print("An Error has Occured!")   
+        
         self.main_menu()
 
     @introduction("Animal Adoption")    

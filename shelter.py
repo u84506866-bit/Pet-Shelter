@@ -1,5 +1,5 @@
 from animals import Animal
-from exceptions import Exception
+from exceptions import AnimalAlreadyAdoptedError,AnimalNotFoundError, DuplicateAnimalMethod, MaximumAdoptionReachedError
 
 class Shelter:
 
@@ -8,9 +8,9 @@ class Shelter:
         self.__animal_list = list()
         self.__adopted_animals = list()
 
-    def add_animal(self, Animal):
+    def add_animal(self, animal):
 
-        self.__animal_list.append(Animal)
+        self.__animal_list.append(animal)
 
     def remove_animal(self,name):
 
@@ -29,9 +29,8 @@ class Shelter:
 
     def show_animals(self):
 
-        for index in self.__animal_list:
-            print (f"{index.name}: {index.gender} {index.age} {index.breed}")
-
+        for animal_ in self.__animal_list:
+             print (f"{animal_.id}.name:{animal_.name} age:{animal_.age} gender:{animal_.gender} breed:{animal_.breed} Adopted?{animal_.adopted}")
 
     def adopt_animal(self, Animal, Adopter):
          # here i will take the person name and then turn the animal.adopted true and then append it to the adopted animals list
