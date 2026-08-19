@@ -9,7 +9,7 @@ class Main:
     def __init__(self):
 
         self. shelter = Shelter()
-        self.__animal_list = list()
+        self.__animals_list = list()
         self.__person_list = list()
 
         self.id = 0
@@ -65,16 +65,20 @@ class Main:
     @introduction("Adding Animal")
     def add_animal(self):
         try :
-            breed = str(input("Enter animal's breed:(Dog, Cat, Bird, Rabbit)"))
+            breed = str(input("Enter animal's breed(Dog, Cat, Bird, Rabbit): "))
             name = str(input("Enter animal's name: "))
             age = int(input("Enter animal's age: "))
-            gender = str(input("Enter animal's gender: (Female, Male)"))
+            gender = str(input("Enter animal's gender(Female, Male): "))
+
+
+            
         except:
             print("an Error has occured! Please try again...")
-            return self.add_animal()
+            return self.main_menu()
             
 
         self.id += 1  
+
 
         match breed.lower():
 
@@ -92,47 +96,48 @@ class Main:
 
             case _:
                         print("⚠️ Unknown breed.")
-                        return self.add_animal()
+                        return self.main_menu()
 
-        self.add_animal(self.animal)    
+        self.__animals_list.append(self.animal)    
         self.main_menu()
 
     @introduction("Showing All Animals")
-    def show_animals(self,  animals_list):
-        pass
+    def show_animals(self):
+        for animal_ in self.__animals_list:
+            print (f"{animal_.id}. name:{animal_.name} age:{animal_.age} gender:{animal_.gender} breed:{animal_.breed}")
 
         self.main_menu()
 
     @introduction("Searching Animal")
     def search_animal(self, name):
         pass
-
+        # not implemented
         self.main_menu()
 
     @introduction("Animal Adoption")    
     def adopt_animal(self,name,id):
 
         pass
-
+        # not implemented
         self.main_menu()
 
 
     @introduction("Return Animal to Shelter")
     def return_animal(self):
         pass
-
+        # not implemented
         self.main_menu()
 
     @introduction("Showing All Available Animals")
     def show_available_animals(self):
         pass
-
+        #not implemented
         self.main_menu()
 
     @introduction("Show Adopted Animals")
     def show_adopted_animals(self):
         pass
-
+        # not implemented
         self.main_menu()
 
 if __name__ == "__main__":
