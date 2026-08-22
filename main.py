@@ -16,7 +16,7 @@ class Main:
         self.authentication()
 
     @bold_introduction(header="Authentication",Symbol="🫆")
-    def  authentication():
+    def  authentication(self):
 
         choice = input("👋 Welcome! Please select your role: \n1. Shelter Manager\n2. Adopter\n3.Exit Program\nEnter choice: ")
 
@@ -31,9 +31,49 @@ class Main:
                     self.manager_menu()
 
             case 2:
-                self.user_menu()
+                choice_ = input("1. Login\n2. Signup")
 
-    @bold_introduction(header="Management System",Symbol="👑")
+                match choice_:
+
+                    case 1:
+
+                        introduction(header="Login", Symbol="🖑")
+                        name = input("Please Enter Your Name: ")
+                        phone_number = input("Please Enter Your Phone: ")
+                        
+                        for person in self.__person_list:
+                            if person.name == name:
+                                if person.phone == phone_number:
+                                    self.user_menu()
+                                    break
+
+                        print ("No Person Was Found that match your information!")
+                        self.authentication()
+
+                    case 2:
+
+                      try:
+
+                        introduction(header="Signup", Symbol="🖑")
+
+                        name = str(input("Enter Your Name:"))
+
+                        phone = str(input("Enter Your Phone Number: "))
+
+                        national_id = str(input("Enter Your National ID: "))
+                        
+                        person = Adopter(name = name, phone=phone, national_id=national_id)
+
+                        self.__person_list.append(person)
+
+                      except:
+
+                        print("There is a mismatch type in your data! please try again with correct data")                        
+                        self.authentication()
+                            
+                        print("\n✅ Signup was successful!")
+
+    @bold_introduction(header="Management System",Symbol="🖆")
     def manager_menu(self):
 
             choice = input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit")
@@ -46,6 +86,10 @@ class Main:
                 case 2:
                     self.show_animals()
 
+                case _:
+                    print("Irrelevent option!")
+                    self.manager_menu()
+
     @bold_introduction(header="Adoption System", Symbol="👤")
     def user_menu(self):
         
@@ -55,13 +99,13 @@ class Main:
 
             choice = int(input("\nEnter Choice: "))
 
-            while choice not in range(1,9):
+            while choice not in range(1,7):
                 choice = int(input("⚠️ Invalid Option Please Try Again: "))
 
         except ValueError:
             
             print("❌ Error! You Didn't Enter a Number!")
-            return self.main_menu()
+            return self.user_menu()
             
 
         match choice:
@@ -96,14 +140,14 @@ class Main:
             
         except:
             print("an Error has occured! Please try again...")
-            return self.main_menu()
+            return self.manager_menu()
             
 
         self.id += 1  
 
         if gender.lower() not in ["male","female"]:
             print("Invalid Gender!!")
-            self.main_menu()
+            self.user_menu()
 
 
         match breed.lower():
@@ -122,7 +166,7 @@ class Main:
 
             case _:
                         print("⚠️ Unknown breed.")
-                        return self.main_menu()
+                        return self.user_menu()
                         
         self.shelter.add_animal(self.animal)
         # self.__animals_list.append(self.animal)    
@@ -131,7 +175,7 @@ class Main:
     @introduction(header="Showing All Animals",Symbol="🐾")
     def show_animals(self):
         self.shelter.show_animals()
-        self.main_menu()
+        self.user_menu()
 
     @introduction(header="Searching Animal", Symbol="🐾")
     def search_animal(self):
@@ -142,33 +186,36 @@ class Main:
         except:
             print("An Error has Occured!")   
         
-        self.main_menu()
+        self.user_menu()
 
     @introduction(header="Animal Adoption", Symbol="🐾")    
-    def adopt_animal(self,name,id):
+    def adopt_animal(self,name):
 
-        pass
-        # not implemented
-        self.main_menu()
+        Shelter.search_animal(name = name)
+
+        self.user_menu()
 
 
     @introduction(header="Return Animal to Shelter", Symbol="🐾")
-    def return_animal(self):
-        pass
-        # not implemented
-        self.main_menu()
+    def return_animal(self,id):
+
+        Shelter.returning_animal()
+
+        self.user_menu()
 
     @introduction(header="Showing All Available Animals", Symbol="🐾")
     def show_available_animals(self):
-        pass
-        #not implemented
-        self.main_menu()
+        
+        self.shelter.show_animals()
+        
+        self.user_menu()
 
     @introduction(header="Show Adopted Animals", Symbol="🐾")
     def show_adopted_animals(self):
-        pass
-        # not implemented
-        self.main_menu()
+        
+        self.shelter.show_animals_adopted()
+        
+        self.user_menu()
 
 if __name__ == "__main__":
 

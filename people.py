@@ -8,7 +8,7 @@ import re
 class Adopter:
     # each person has a name a phone number and national id
     # and most importantly how many pets do they have
-    def __init__(self, name, phone, national_id, adopted_animals):
+    def __init__(self, name, phone, national_id, adopted_animals= 0):
         self.name = str(name)
         self.phone = str(phone)
         self.national_id = str(national_id)
