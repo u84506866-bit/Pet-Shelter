@@ -38,6 +38,7 @@ class Shelter:
             if Adopter.adopted_animals < 9:
                 self.__adopted_animals.append([Animal,Adopter])
                 Animal.adopted = True
+                Adopter.adopted_animals += 1
 
             else:
                 Exception.MaximumAdoptionReachedError()
@@ -46,9 +47,17 @@ class Shelter:
             Exception.AnimalAlreadyAdoptedError()
 
         
-    def returning_animal(self):
-        pass
+    def returning_animal(self,id):
+        for animal in self.__adopted_animals:
+            if animal.id == id:
+                self.__adopted_animals.remove(animal)
+
+        for animal in self.__animal_list:
+            if animal.id == id:
+                animal.adopted = False
 
 
     def  show_animals_adopted(self):
-        pass
+
+        for animal in self.__adopted_animals:
+            print(f"{animal.id}.{animal.name}: {animal.age} {animal.gender} {animal.breed} ")

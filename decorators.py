@@ -1,8 +1,8 @@
-def bold_introduction(header):
+def bold_introduction(header, Symbol):
     def decorator(func):
         def wrapper(self, *args, **kwargs):
             print(f"=================================\n"\
-                  f"{header}\n"\
+                  f"{Symbol}  {header}  {Symbol}\n"\
                   f"=================================\n")
 
             result = func(self, *args, **kwargs)
@@ -11,11 +11,11 @@ def bold_introduction(header):
     return decorator
 
 
-def introduction(header):
+def introduction(header, Symbol):
     def decorator(func):
         def wrapper(self, *args, **kwargs):
             print(f"------------------------------------------------------------------------\n" \
-            f"  🐾 {header} 🐾\n" \
+            f"  {Symbol}  {header}  {Symbol}\n" \
             f"------------------------------------------------------------------------\n")
             result = func(self, *args, **kwargs)
 

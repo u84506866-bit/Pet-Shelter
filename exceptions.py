@@ -1,14 +1,17 @@
-class AnimalNotFoundError():
-    pass
+import main
 
+class AnimalNotFoundError():
+    print("The Animal Was Not Found!")
+    main.Main.user_menu()
 
 class DuplicateAnimalMethod():
-    pass
-
+    print("Duplication Error!")
+    main.Main.manager_menu()
 
 class AnimalAlreadyAdoptedError():
-    pass
-
+    print("Sorry the Animal is Already Adopted! ")
+    main.Main.user_menu()
 
 class MaximumAdoptionReachedError():
-    pass
+    print("Maximum Adoption limit is 9 and you have surpassed the limit!")
+    main.Main.user_menu()

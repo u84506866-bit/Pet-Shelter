@@ -15,7 +15,7 @@ class Main:
 
         self.authentication()
 
-    @bold_introduction("Authentication")
+    @bold_introduction(header="Authentication",Symbol="🫆")
     def  authentication():
 
         choice = input("👋 Welcome! Please select your role: \n1. Shelter Manager\n2. Adopter\n3.Exit Program\nEnter choice: ")
@@ -23,11 +23,17 @@ class Main:
         match choice:
 
             case 1:
-                self.manager_menu()
+
+                username = str(input("Enter Your Username: "))
+                password = str(input("Enter Your Password:  "))
+
+                if username == "admin" and password == "1234":
+                    self.manager_menu()
 
             case 2:
                 self.user_menu()
 
+    @bold_introduction(header="Management System",Symbol="👑")
     def manager_menu(self):
 
             choice = input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit")
@@ -40,7 +46,7 @@ class Main:
                 case 2:
                     self.show_animals()
 
-    @introduction("ANIMAL SHELTER MANAGEMENT SYSTEM")
+    @bold_introduction(header="Adoption System", Symbol="👤")
     def user_menu(self):
         
         print("What you want to do?\n1. Search Animal\n2. Adopting Animal\n3. Return Animal\n4. Show Available Animals\n5. Show Adopted Animals\n6. Exit ")
@@ -78,7 +84,7 @@ class Main:
             case 6:
                 exit()
 
-    @introduction("Adding Animal")
+    @introduction(header="Adding Animal", Symbol="🐾")
     def add_animal(self):
         try :
             breed = str(input("Enter animal's breed(Dog, Cat, Bird, Rabbit): "))
@@ -120,14 +126,14 @@ class Main:
                         
         self.shelter.add_animal(self.animal)
         # self.__animals_list.append(self.animal)    
-        self.main_menu()
+        self.manager_menu()
 
-    @introduction("Showing All Animals")
+    @introduction(header="Showing All Animals",Symbol="🐾")
     def show_animals(self):
         self.shelter.show_animals()
         self.main_menu()
 
-    @introduction("Searching Animal")
+    @introduction(header="Searching Animal", Symbol="🐾")
     def search_animal(self):
 
         try:
@@ -138,7 +144,7 @@ class Main:
         
         self.main_menu()
 
-    @introduction("Animal Adoption")    
+    @introduction(header="Animal Adoption", Symbol="🐾")    
     def adopt_animal(self,name,id):
 
         pass
@@ -146,19 +152,19 @@ class Main:
         self.main_menu()
 
 
-    @introduction("Return Animal to Shelter")
+    @introduction(header="Return Animal to Shelter", Symbol="🐾")
     def return_animal(self):
         pass
         # not implemented
         self.main_menu()
 
-    @introduction("Showing All Available Animals")
+    @introduction(header="Showing All Available Animals", Symbol="🐾")
     def show_available_animals(self):
         pass
         #not implemented
         self.main_menu()
 
-    @introduction("Show Adopted Animals")
+    @introduction(header="Show Adopted Animals", Symbol="🐾")
     def show_adopted_animals(self):
         pass
         # not implemented
