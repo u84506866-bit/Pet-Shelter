@@ -18,21 +18,26 @@ class Main:
     @bold_introduction(header="Authentication",Symbol="🫆")
     def  authentication(self):
 
-        choice = input("👋 Welcome! Please select your role: \n1. Shelter Manager\n2. Adopter\n3.Exit Program\nEnter choice: ")
+        choice = input("👋 Welcome! Please select your role: \n1. 🖆Shelter Manager\n2.👤 Adopter\n3.✖️Exit Program\nEnter choice: ")
 
         match choice:
 
             case 1:
 
                 username = str(input("Enter Your Username: "))
-                password = str(input("Enter Your Password:  "))
+                password = str(input("Enter Your password:  "))
 
                 if username == "admin" and password == "1234":
                     self.manager_menu()
 
             case 2:
-                choice_ = input("1. Login\n2. Signup")
 
+                try:
+                    choice_ = int(input("1. Login\n2. Signup"))
+                except:
+                    print("not a number!")
+                    self.authentication()
+                    
                 match choice_:
 
                     case 1:
@@ -44,10 +49,12 @@ class Main:
                         for person in self.__person_list:
                             if person.name == name:
                                 if person.phone == phone_number:
+
+                                    print("\n✅ Signup was successful!")
                                     self.user_menu()
                                     break
 
-                        print ("No Person Was Found that match your information!")
+                        print ("⛔No Person Was Found!")
                         self.authentication()
 
                     case 2:
@@ -56,11 +63,11 @@ class Main:
 
                         introduction(header="Signup", Symbol="🖑")
 
-                        name = str(input("Enter Your Name:"))
+                        name = str(input("✒️ Enter Your Name:"))
 
-                        phone = str(input("Enter Your Phone Number: "))
+                        phone = str(input("☎️Enter Your Phone Number: "))
 
-                        national_id = str(input("Enter Your National ID: "))
+                        national_id = str(input("🪪 Enter Your National ID: "))
                         
                         person = Adopter(name = name, phone=phone, national_id=national_id)
 
@@ -73,10 +80,17 @@ class Main:
                             
                         print("\n✅ Signup was successful!")
 
+                    case _:
+                        print("❌ Irrelevent Option!")
+
     @bold_introduction(header="Management System",Symbol="🖆")
     def manager_menu(self):
 
-            choice = input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit")
+            try:
+                choice = int(input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit"))
+            except:
+                print("not a number!")
+                self.manager_menu
 
             match choice:
 
@@ -87,7 +101,7 @@ class Main:
                     self.show_animals()
 
                 case _:
-                    print("Irrelevent option!")
+                    print("❌ Irrelevent option!")
                     self.manager_menu()
 
     @bold_introduction(header="Adoption System", Symbol="👤")
@@ -99,10 +113,10 @@ class Main:
 
             choice = int(input("\nEnter Choice: "))
 
-            while choice not in range(1,7):
+            while choice not in range(1,8):
                 choice = int(input("⚠️ Invalid Option Please Try Again: "))
 
-        except ValueError:
+        except:
             
             print("❌ Error! You Didn't Enter a Number!")
             return self.user_menu()
@@ -110,22 +124,25 @@ class Main:
 
         match choice:
 
-            case 1:
-                self.search_animal()
+            case  1:
+                self.show_animals()
 
             case 2:
-                self.adopt_animal()
+                self.search_animal()
 
             case 3:
-                self.return_animal()
+                self.adopt_animal()
 
             case 4:
-                self.show_available_animals()
+                self.return_animal()
 
             case 5:
-                self.show_adopted_animals()
+                self.show_available_animals()
 
             case 6:
+                self.show_adopted_animals()
+
+            case 7:
                 exit()
 
     @introduction(header="Adding Animal", Symbol="🐾")
@@ -189,9 +206,9 @@ class Main:
         self.user_menu()
 
     @introduction(header="Animal Adoption", Symbol="🐾")    
-    def adopt_animal(self,name):
+    def adopt_animal(self, person, animal):
 
-        Shelter.search_animal(name = name)
+        self.shelter.adopt_animal([animal,person])
 
         self.user_menu()
 
@@ -199,7 +216,7 @@ class Main:
     @introduction(header="Return Animal to Shelter", Symbol="🐾")
     def return_animal(self,id):
 
-        Shelter.returning_animal()
+        self.shelter.returning_animal(id)
 
         self.user_menu()
 

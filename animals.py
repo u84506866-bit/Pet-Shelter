@@ -11,7 +11,7 @@ class Animal:
 
 
     def show_info(self):
-        print(f"{self.name}:{self.age} {self.gender} {self.breed}")
+        print(f"{self.id}{self.name}:{self.age} {self.gender} {self.breed} {self.adopted}")
 
 
 class Dog(Animal):

@@ -8,11 +8,11 @@ import re
 class Adopter:
     # each person has a name a phone number and national id
     # and most importantly how many pets do they have
-    def __init__(self, name, phone, national_id, adopted_animals= 0):
+    def __init__(self, name, phone, national_id):
         self.name = str(name)
         self.phone = str(phone)
         self.national_id = str(national_id)
-        self.adopted_animals = int(adopted_animals)
+        self.__adopted_animals = list()
 
     # Here we will use regex to determine wheter or not they 
     # are giving correct information before they can adopt 

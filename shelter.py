@@ -20,7 +20,7 @@ class Shelter:
                 self.__animal_list.remove(animal)
 
     
-    def search_animal(self, name):
+    def search_anima_name(self, name):
 
         for animal in self.__animal_list:
             if animal.name == name:
@@ -36,7 +36,8 @@ class Shelter:
          # here i will take the person name and then turn the animal.adopted true and then append it to the adopted animals list
          if Animal.adopted == False:
             if Adopter.adopted_animals < 9:
-                self.__adopted_animals.append([Animal,Adopter])
+                self.__adopted_animals.append(Animal)
+                Adopter.add_animal()
                 Animal.adopted = True
                 Adopter.adopted_animals += 1
 
