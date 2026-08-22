@@ -18,7 +18,10 @@ class Main:
     @bold_introduction(header="Authentication",Symbol="🫆")
     def  authentication(self):
 
-        choice = input("👋 Welcome! Please select your role: \n1. 🖆Shelter Manager\n2.👤 Adopter\n3.✖️Exit Program\nEnter choice: ")
+        try:
+            choice = int(input("👋 Welcome! Please select your role: \n1.🖆  Shelter Manager\n2.👤 Adopter\n3.✖️  Exit Program\nEnter choice: "))
+        except:
+            print("Not a number!")
 
         match choice:
 
@@ -87,7 +90,7 @@ class Main:
     def manager_menu(self):
 
             try:
-                choice = int(input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Exit"))
+                choice = int(input("What you want to do?\n1. Add Animal\n2. Show Animals\n3. Return To Mainmenu \n4.Exit\nEnter Choice: "))
             except:
                 print("not a number!")
                 self.manager_menu
@@ -99,6 +102,9 @@ class Main:
 
                 case 2:
                     self.show_animals()
+
+                case 3:
+                    exit()
 
                 case _:
                     print("❌ Irrelevent option!")
